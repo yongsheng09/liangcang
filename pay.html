@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>支付宝 - 网上支付 安全快速！</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/pay.css" />
+</head>
+<body>
+    <header>
+        <div class="welcome wrap">
+            <span>你好，欢迎使用支付宝 !</span><a href="javascript:;">常见问题</a>
+        </div>
+    </header>
+    <nav>
+        <div class="wrap">
+            <p>我的收银台</p>
+        </div>
+    </nav>
+    <section>
+        <div class="content wrap">
+            <p class="sec-p1">正在使用即时到账交易 [?] 交易将在59分钟后关闭，请及时付款！</p>
+            <p class="sec-p2"><span><em></em>.00</span>元</p>
+            <p class="sec-p3">
+                Kevlar Cable军工级数据线苹果安卓 高速充电Lightning 90度苹果...
+                <span>收款方：北京良仓文化传播有...</span>
+            </p>
+            <p class="sec-p4"><a href="javascript:;">订单详情</a></p>
+            <div class="pay wrap">
+                <div class="pay-left fl">
+                    <div class="scan">
+                        <span>扫一扫付款（元）</span>
+                        <p><span></span>.00</p>
+                        <div class="qr">
+                            <img src="images/qr.png" alt="" />
+                            <div class="qr-bottom">
+                                <img src="images/sao.png" alt="" class="fl" />
+                                <div class="qr-bott-right fl">
+                                    <p>打开手机支付宝</p>
+                                    <p>扫一扫继续付款</p>
+                                </div>
+                            </div>
+                        </div>
+                        <img src="images/big.png" alt="" />
+                        <a href="javascript:;">首次使用请下载手机支付宝</a>
+                    </div>
+                </div>
+                <div class="pay-right fl">
+                    <div class="login-pay">
+                        <img src="images/tv.png" alt="" />
+                        <p>< 登录账户付款</p>
+                    </div>
+                </div>
+            </div>
+
+            <footer>
+                <div class="wrap">
+                    <p><a href="javascript:;">ICP证：沪B2-20150087</a></p>
+                    <img src="images/friendlink.png" alt="" />
+                </div>
+            </footer>
+        </div>
+    </section>
+
+<script src="js/jQuery-v1.12.4.min.js"></script>
+<script>
+    $(function(){
+        var str = location.search.substr(1);
+        var sum = str.split("=")[1];
+        $(".sec-p2 span em").html(sum);
+        $(".scan>p span").html(sum);
+    })
+
+</script>
+</body>
+
+</html>

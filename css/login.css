@@ -1,0 +1,17 @@
+.content{margin:80px auto;width: 321px;height:400px;text-align: center;}
+.logo{display: block;width: 118px;height: 200px;background: url(../images/logo.png) no-repeat;margin:0 auto 62px;}
+p.topinput,p.bottominput{text-align: left;}
+p input{border-bottom:1px solid #000;padding-left:33px;font-size: 17px;color:#767676}
+p.topinput input{width: 268px;height: 35px;margin-bottom: 22px;}
+p.topinput i{display:inline-block;width: 19px;height: 24px;background:url(../images/phone.png) no-repeat;position: relative;top:-4px;left:19px;}
+p.bottominput input{width: 141px;height: 35px;}
+p.bottominput em{display:inline-block;width: 19px;height: 24px;background:url(../images/right.png) no-repeat;position: relative;top:12px;left:20px;}
+p.bottominput a{padding:10px 15px;border:1px solid #000;border-radius: 5px;color:#333;margin-left: 11px;}
+div.Auto{text-align: left;margin:27px 0 33px 19px}
+div.Auto span{relative;top:-3px;font-size: 11px;margin-left: 5px;position:}
+#loginbar{font-size:17px;color:#fff;padding:18px 133px 15px 135px;margin-left: 19px;line-height: 50px;background:#25292e;border-radius: 5px;}
+div.more{margin-top:25px;}
+div.more a{margin:50px;font-size: 13px;color:#333;}
+div.more a.register{font-size: 16px;font-weight: bold;color:#333;}
+div.more a.register:hover{text-decoration:underline;}
+div.more a em{margin-left:5px;}

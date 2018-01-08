@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>购物车.良仓-生活美学指南</title>
+        <meta name="keywords" content="良仓，良品，导购，购物，团购，社交，圈子，达人，分享，生活，时尚，白领，明星，潮流，精品,野兽派，野兽派花店，果库，想去，风格网，LC风格网，周末画报，新视线，GQ, VOGUE, 芭莎，尚雯婕，iweekly, ELLE, 优家，Yoox, net a porter, farfech, the coner, LN-ccshopping,share,social,design,designer,product,object,良仓、i良仓、物品、生活家、设计、导购、恋物、创意、良品、分享、社交、电商、淘宝、新视线、设计品、设计师、原创设计、北欧、独立设计师、设计品牌、明星导购、达人、设计商店、在线商店、闪购、打折、折扣、礼物、关注、粉丝、推荐、喜欢圈子、日本、全球购、丹麦、海外购、瑞典、复古、家居、家具、质感、品质">
+        <meta name="description" content="良仓是数百位意见领袖引领的生活美学分享社区,良仓商店和APP精选售卖来自全球最精美的生活产品及礼物，良仓杂志的报道最有趣味及品味的人和事。">
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/cart.css" />
+    </head>
+    <body>
+    	<div class="fix">
+            <header>
+                <div class="header-wrap">
+                    <a href="index.html" class="logo"></a>
+                    <ul class="menu">
+                        <li><a href="login.html" class="gin change">登录</a></li>
+                        <li><a href="register.html" class="gin register">注册</a></li>
+                        <li class="line"></li>
+                        <li><a href="#" class="space">购物车</a></li>
+                        <li class="line"></li>
+                        <li><a href="#" class="space">消息</a></li>
+                        <li class="line"></li>
+                        <li><a href="#" class="add">添加良品</a></li>
+                    </ul>
+                </div>
+            </header>
+            <nav>
+                <ul id="nav">
+                    <li class="home">
+                        <a href="index.html">首页</a>
+                    </li>
+                    <li class="shop">
+                        <a href="shop.html">商店</a>
+                        <div class="shop-list">
+                            <div class="shop-list-wrap">
+                                <ul id="nav-twolist">
+                                    <li><img src="images/jiaju.png" alt="" /><a href="javascript:;"></a></li>
+                                    <li><img src="images/jiaju2.png" alt="" /><a href="javascript:;"></a></li>
+                                    <li><img src="images/wenju.png" alt="" /><a href="javascript:;"></a></li>
+                                    <li><img src="images/shuma.png" alt="" /><a href="javascript:;"></a></li>
+                                    <li><img src="images/wanle.png" alt="" /><a href="javascript:;"></a></li>
+                                    <li><img src="images/chuwei.png" alt="" /><a href="javascript:;"></a></li>
+                                    <li><img src="images/meishi.png" alt="" /><a href="javascript:;"></a></li>
+                                    <li><img src="images/nanzhuang.png" alt="" /><a href="javascript:;"></a></li>
+                                    <li><img src="images/nvzhuang.png" alt="" /><a href="javascript:;"></a></li>
+                                    <li><img src="images/tongzhuang.png" alt="" /><a href="javascript:;"></a></li>
+                                    <li><img src="images/xiebao.png" alt="" /><a href="javascript:;">鞋包</a></li>
+                                    <li><img src="images/peishi.png" alt="" /><a href="javascript:;">配饰</a></li>
+                                    <li><img src="images/meihu.png" alt="" /><a href="javascript:;">美护</a></li>
+                                    <li><img src="images/huwai.png" alt="" /><a href="javascript:;">户外</a></li>
+                                    <li><img src="images/zhiwu.png" alt="" /><a href="javascript:;">植物</a></li>
+                                    <li><img src="images/tushu.png" alt="" /><a href="javascript:;">图书</a></li>
+                                    <li><img src="images/yishu.png" alt="" /><a href="javascript:;">艺术</a></li>
+                                    <li><img src="images/liwu.png" alt="" /><a href="javascript:;">礼物</a></li>
+                                    <li><img src="images/tuijian.png" alt="" /><a href="javascript:;">推荐</a></li>
+                                </ul>
+                                <div class="findAll">
+                                    <span>查看所有品牌 ></span> <span>最新到货 ></span>
+                                </div>
+                            </div>
+                            <div class="magazine">
+                                <img src="images/newsee.jpg" alt="" />
+                                <p>新视线 ：<span>2015年7月刊</span></p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">杂志</a>
+                    </li>
+                    <li>
+                        <a href="#">分享</a>
+                    </li>
+                    <li>
+                        <a href="#">达人</a>
+                    </li>
+
+                </ul>
+                <div class="search">
+                    <input type="text" placeholder="search..." id="str" />
+                    <a href="javascript:;" class="btn"></a>
+                </div>
+            </nav>
+        </div>
+        <section>
+            <div class="middle">
+                <div class="list">
+                        <span>购物车</span>
+                        <span>结算</span>
+                </div>
+                <div class="cart-menu">
+                    <input type="checkbox" id="selectAll" /><span>全选</span><span>良品</span><span>数量</span><span>单价（元）</span><span>小计（元）</span><span>操作</span>
+                </div>
+                <div class="cart-msg">
+                    <ul id="msg-ul">
+                        <!-- <li>
+                            <input type="checkbox" class="select" /><img src="images/0.jpg" alt="" /><p>红色表盘 银色米兰表带40mm | 丹麦极简风潮 创意点线结合设计腕表表盘40mm</p>
+                            <p>
+                                <img src="images/minus.png" alt="" class="minus" /><span class="num">99</span>
+                                <img src="images/add.png" alt="" class="add">
+                            </p>
+                            <span class="price">13.00</span><span class="total">13</span><span class="delete">删除</span>
+                        </li> -->
+
+                    </ul>
+                </div>
+                <div class="cart-submit">
+                    <p>良品总价<em>/</em><span>￥<b id="allMoney">0.00</b></span></p>
+                    <a href="javascript:;" class="done">立即结算</a>
+                    <a href="list.html"><span>继续购物</span></a>
+                </div>
+            </div>
+        </section>
+        <div class="foot">
+            <p><a href="#"><em></em></a><a href="#"><i></i></a></p>
+                <ul>
+                    <li class="foot-li">
+                        <em></em>
+                        <div>
+                        <h4>全球精品</h4>
+                        <p>Global Selections</p>
+                        </div>
+                    </li>
+                    <li class="foot-li foot-em2">
+                        <em></em>
+                        <div>
+                        <h4>正品保证</h4>
+                        <p>Authenticity</p>
+                        </div>
+                    </li>
+                    <li class="foot-li foot-em3">
+                        <em></em>
+                        <div>
+                        <h4>全场包邮</h4>
+                        <p>Free Delivery</p>
+                        </div>
+                    </li>
+                    <li class="foot-li foot-em4">
+                        <em></em>
+                        <div>
+                        <h4>400-897-6336</h4>
+                        <p>工作日 09:00-18:00</p>
+                        </div>
+                    </li>
+                </ul>
+        </div>
+		<footer>
+            <div class="empty1"></div>
+            <div class="bottom">
+                <div class="footer-top">
+                    <div class="scan">
+                        <i></i>
+                        <div class="load">
+                            <p>iPhone Android</p>
+                            <span>客户端下载</span>
+                        </div>
+                        <div class="twolist">
+                            <div class="iphone">
+                                <div class="iphone-top">
+                                    <i></i>
+                                </div>
+
+                                <p>下载iPhone版</p>
+                            </div>
+                            <div class="android">
+                                <div class="android-top">
+                                    <i></i>
+                                </div>
+                                <p>下载Android版</p>
+                            </div>
+                            <div class="empty2"></div>
+                        </div>
+                    </div>
+                    <div class="loginstyle">
+                        <div class="weixin">
+                            <div class="wrap-scan">
+                                <a href="#" class="weixinscan"></a>
+                            </div>
+                        </div>
+                        <a href="#" class="weibo"></a>
+                        <a href="#" class="douban"></a>
+                    </div>
+                </div>
+                <ul class="friendlink">
+                    <li><a href="#">关于良仓</a></li><li class="foot-line"></li><li><a href="#">服务协议</a></li><li class="foot-line"></li>
+                    <li><a href="#">隐私保护政策</a></li><li class="foot-line"></li><li><a href="#">使用指南</a></li><li class="foot-line"></li>
+                    <li><a href="#">联系我们</a></li><li class="foot-line"></li><li><a href="#">加入我们</a></li><li class="foot-line"></li>
+                    <li><a href="#">友情链接</a></li><li class="foot-line"></li><li><a href="#">私信良仓</a></li>
+                </ul>
+                <div class="texts">
+                    <p>© 2013-2015 北京良仓文化传播有限公司版权所有 京ICP备13010677号-1 京公网安备11010502025627</p>
+                    <p>公司名称：北京良仓文化传播有限公司  电话：010-58263516</p>
+                    <p>公司地址：北京朝阳区百子湾路32号6号楼1层60号.</p>
+                    <p>社会信用统一代码：91110105059231575L  食品许可证：JY11105160159557</p>
+                    <p>图书证名称：中华人民共和国出版物经营许可证  图书证编号：新出发京零 字第 朝 150051 号</p>
+                </div>
+            </div>
+        </footer>
+
+        <div class="totop"></div>
+        <div class="cue">
+            <div class="cue-msg">
+                <div class="close"></div>
+                <img src="images/pop_bg_header.png" alt="" />
+                <p></p>
+            </div>
+        </div>
+
+        <script src="js/jQuery-v1.12.4.min.js"></script>
+        <script src="js/base.js"></script>
+        <script>
+        	if(localStorage.token){
+                $(".change").html("欢迎您"+localStorage.getItem("username"));
+                $(".register").empty();
+            }
+            $(function(){
+                /*把购物车信息导入页面*/
+                $.ajax({
+                    "url": "http://h6.duchengjiu.top/shop/api_cart.php?token="+localStorage.token,
+                    "type": "POST",
+                    "dataType":"json",
+                    "success": function(response){
+                        console.log(response);
+                        var num = 1;
+                        if(response.data.length>0){
+                            for(var i=0;i<response.data.length;i++){
+                                var obj=response.data[i];
+                                $("#msg-ul").append(`
+                                    <li>
+                                        <input type="checkbox" class="select" />
+                                        <img src="${obj.goods_thumb}" alt="" />
+                                        <p>${obj.goods_name}</p>
+                                        <p>
+                                            <img src="images/minus.png" alt="" class="minus" />
+                                            <span class="num">${obj.goods_number}</span>
+                                            <img src="images/add.png" alt="" class="add">
+                                        </p>
+                                        <span class="price">${obj.goods_price}</span>
+                                        <span class="total">${obj.goods_price*obj.goods_number}</span>
+                                        <span class="delete">删除</span>
+                                        <input type="hidden" class="goods_id" value="${obj.goods_id}"/>
+                                    </li>
+                                `)
+                            }
+                            // var goodsd = $(".goods_id").val();
+                            // console.log(goodsd)
+                            $(".add").click(function(){
+                                updataCart(this,"+1");
+                            })
+                            $(".minus").click(function(){
+                                updataCart(this,"-1");
+                            })
+                            /*点击移除购物车商品*/
+                            $(".delete").click(function(){
+                                if(confirm("确定从购物车移除吗？")){
+                                    var goods = this.parentNode;
+                                    updataCartAjax(goods,0);
+                                    goods.remove();
+                                }
+                            })
+                        }
+                    }
+                })
+
+                function updataCart(obj,type){
+                        var UL = obj.parentNode.parentNode,
+                            number = UL.getElementsByClassName("num")[0],
+                            numVal = parseInt(number.innerText),
+                            price = UL.getElementsByClassName("price")[0],
+                            priceVal = parseFloat(price.innerText),
+                            total = UL.getElementsByClassName("total")[0];
+                        if(type ==="+1"){
+                            numVal++;
+                        }else if(type === "-1"){
+                            numVal--;
+                        }
+                        if(numVal>=20||numVal<1){return};
+                        number.innerHTML = numVal;
+                        total.innerHTML = numVal*priceVal;
+                        showSum();
+                }
+            })
+            //显示总价
+            function showSum(){
+                //动态得到数据类数组
+                var msgUL = document.getElementById("msg-ul");
+                var aLi = msgUL.getElementsByTagName("li");
+                var sum = 0;
+                // var num = 0;
+                for(var i=0;i<aLi.length;i++){
+                    var goods = aLi[i];
+                    if($(goods).children("input").is(':checked')){
+                        // console.log($(goods).children(".total").text() )
+                        sum += parseInt( $(goods).children(".total").text() );
+                        // num += parseInt($(goods).children("div:eq(2)").children("input:eq(1)").val());
+                    }
+                }
+
+                $("#allMoney").text(sum);
+                // $("#Amount").text(num);
+            }
+            $(".done").click(function(){
+                var sum = $("#allMoney").text();
+                // console.log($("#msg-ul li").children("input"))
+                if($("#msg-ul li").children("input").is(':checked')){
+                    location.href = "checkout2.html?sum="+sum;             /*把当前总数传过去，key可自定义。*/
+                }else{
+                    $(".cue").show();
+                    $(".cue p").html("请选择您要结算的商品！");
+                }
+            })
+            $(".close").click(function(){$(".cue").hide()});
+            $(".middle").click(function(event){
+                //全局委托方法
+                //全选
+                if(event.target.id==="selectAll"){
+                    var selected = event.target.checked;
+                 console.log(selected);
+                 console.log(event.target);
+                    var checkboxs=document.getElementsByClassName("select");
+                    console.log(checkboxs);
+                    for(var i=0;i<checkboxs.length;i++){
+                        checkboxs[i].checked = selected;
+                    }
+                    showSum();
+                    return;
+                }
+                // //除了全选的多选框事件
+                if(event.target.type === "checkbox"){
+                    showSum();
+                }
+            })
+
+        	function updataCartAjax(obj,num){
+            	var goods_id = obj.getElementsByClassName("goods_id")[0].value;
+            	// console.log(goods_id);
+            	//删除商品信息
+            	$.ajax({
+            		"url": "http://h6.duchengjiu.top/shop/api_cart.php?token="+ localStorage.token,
+            		"type": "POST",
+            		"data": {
+            			"goods_id": goods_id,
+            			"number": num
+            				},
+            		"dataType": "json",
+            		"success": function(response){
+            			// console.log(response);
+            		}
+            	})
+            }
+        </script>
+    </body>
+</html>

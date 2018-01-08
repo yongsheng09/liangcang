@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>用户注册.良仓-生活美学指南</title>
+        <meta name="keywords" content="良仓，良品，导购，购物，团购，社交，圈子，达人，分享，生活，时尚，白领，明星，潮流，精品,野兽派，野兽派花店，果库，想去，风格网，LC风格网，周末画报，新视线，GQ, VOGUE, 芭莎，尚雯婕，iweekly, ELLE, 优家，Yoox, net a porter, farfech, the coner, LN-cc">
+        <meta name="description" content="良仓是数百位意见领袖引领的生活美学分享社区,良仓商店和APP精选售卖来自全球最精美的生活产品及礼物，良仓杂志的报道最有趣味及品味的人和事。">
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/register.css" />
+    </head>
+    <body>
+        <div class="content">
+            <a href="index.html" class="logo"></a>
+            <div>
+                <span>手机号：</span><input type="text" placeholder="请输入手机号" disabled/>
+
+            </div>
+            <div>
+                <span>验证码：</span><input class="sure" placeholder="输入验证码" disabled/>
+            </div>
+            <div class="user">
+                <span>用户名：</span><input type="text" name="username" placeholder="3-20位字母数字下划线组成，区分大小写" />
+                <p class="success">用户名可以使用</p>
+                <p class="error0">3-20位字母数字下划线组成，区分大小写</p>
+                <p class="error1">用户名已存在</p>
+
+            </div>
+            <div class="pwd">
+                <span>设置密码：</span><input type="password" name="password1" placeholder="最小长度为6位" />
+                <p class="error2">密码长度为6-20位数字或英文字母</p>
+            </div>
+            <div class="dblpwd">
+                <span>确认密码：</span><input type="password" name="password2" placeholder="请再次输入密码" />
+                <p class="error3">输入密码不一致，请重新输入</p>
+
+                <p class="select">
+                     <input type="checkbox" checked /><span>同意</span><a href="javascript:;">良仓注册条款</a>
+                </p>
+                <input type="button" value="立即注册" class="reg" />
+            </div>
+
+        </div>
+        <script src="js/jQuery-v1.12.4.min.js"></script>
+        <script>
+
+         /*用户名验证*/
+            $("input[name='username']").blur(function(){
+                var username=$("input[name='username']").val();
+                // var password=$("input[name='password1']").val();
+                if(username.length<3 || username.length>20){
+                    $(".error0").show();
+                    }else{$(".error0").hide()}
+                $.ajax({
+                    "url": "http://h6.duchengjiu.top/shop/api_user.php",
+                    "type": "post",
+                    "data": {
+                        "status": "check",
+                        "username": username,
+                    },
+                    "dataType": "json",
+                    "success": function(response){
+                        if(response.code===0){
+                            $(".success").show();
+                            $(".error1").hide();
+
+                        }else if(response.code===2001){
+                            $(".error1").show();
+                            $(".success").hide();
+                        }
+                    }
+                })
+            })
+
+            /*检测密码是否合法*/
+            $("input[name=password1]").blur(function(){
+                var $pwd1 = $(this).val();
+                if($pwd1.length<6 || $pwd1.length>20){
+                    $(".error2").show();
+                }else{$(".error2").hide();}
+            })
+
+            /*检测密码是否输入一致*/
+            $("input[name=password2]").blur(function(){
+                var $pwd2 = $(this).val();
+                if($pwd2 !== $("input[name=password1]").val()){
+                    $(".error3").show();
+                }else{
+                    $(".error3").hide();
+                }
+            })
+
+            /*点击注册跳转到登录页面*/
+            $(".reg").click(function(){
+                var username=$("input[name='username']").val();
+                var pwd1=$("input[name='password1']").val();
+                var pwd2=$("input[name='password2']").val();
+                // console.log(username,password1);
+                if(pwd1 !== pwd2 || !pwd1 || !pwd2){return};
+                $.ajax({
+                    "url": "http://h6.duchengjiu.top/shop/api_user.php",
+                    "type": "post",
+                    "data": {
+                        "status": "register",
+                        "username": username,
+                        "password": pwd1
+                    },
+                    "dataType": "json",
+                    "success": function(msg){
+                        console.log(msg);
+                        if(msg.code === 0){
+                            alert("恭喜！注册成功！");
+                            location.href="login.html";
+                        }
+                    }
+                })
+            })
+        </script>
+    </body>
+</html>
